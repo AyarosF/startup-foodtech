@@ -14,8 +14,11 @@
  *= require_self
  */
 
+@import "bootstrap";
 @import "variables/custom_variables";
 
 body {
-font-family: $body-font;
+  margin: 0;
+  padding: 0;
+  font-family: $body-font;
 }

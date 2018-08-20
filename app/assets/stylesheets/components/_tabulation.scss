@@ -15,6 +15,9 @@ ul.tabs{
   	display: inline-block;
   	padding: 10px 15px;
   	cursor: pointer;
+    a {
+      list-style: none; 
+    }
   }
   li.current{
   	background: #ededed;
