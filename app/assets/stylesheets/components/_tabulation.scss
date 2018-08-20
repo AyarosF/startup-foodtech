@@ -1,0 +1,33 @@
+@import "variables/custom_variables";
+
+.container{
+	width: 800px;
+	margin: 0 auto;
+}
+
+ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+  li{
+  	background: none;
+  	color: $black;
+  	display: inline-block;
+  	padding: 10px 15px;
+  	cursor: pointer;
+  }
+  li.current{
+  	background: #ededed;
+  	color: $black;
+  }
+}
+
+.tab-content{
+	display: none;
+	background: #ededed;
+	padding: 15px;
+}
+
+.tab-content.current{
+	display: inherit;
+}

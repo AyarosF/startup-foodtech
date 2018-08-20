@@ -15,3 +15,7 @@
  */
 
 @import "variables/custom_variables";
+
+body {
+font-family: $body-font;
+}
