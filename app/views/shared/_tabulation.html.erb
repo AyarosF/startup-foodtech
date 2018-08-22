@@ -1,25 +1,31 @@
 <div class="wrapper">
   <div class="tabs-container" id="valeurs">
     <ul class="tabs">
-      <li class="tab-link current" data-tab="tab-1">Tab One</li>
-      <li class="tab-link" data-tab="tab-2">Tab Two</li>
-      <li class="tab-link" data-tab="tab-3">Tab Three</li>
+      <li class="tab-link current" data-tab="tab-1">Présentation</li>
+      <li class="tab-link" data-tab="tab-2">Menu</li>
+      <li class="tab-link" data-tab="tab-3">Contact</li>
     </ul>
     <br/>
     <div id="tab-1" class="tab-content current">
+    <h1>Bienvenue chez Saladtomatognon</h1>
+    <p>Pro du kebab (oui on dit kebab et pas grec, big love les parisiens ❤️) depuis 1985 <br /> on fait nos broches nous mêmes et tu vas vite devenir accro, c'est le chef qui te le dit ! </p>
     </div>
     <div id="tab-2" class="tab-content">
-      <div class="slide-container">
+      <h4>Kebab + Frite + Boisson 33 Cl</h4><h5>8€ (c'est la crise)</h5>
+      <h4>Tacos + Frite + 1 Boisson 33 Cl</h5><h5>8€ (c'est la crise)</h5>
+      <h4>Yufka + Frite + 1 Boisson 33 Cl</h4><h5>8€ (c'est la crise)</h5>
+      <br/>
+      <br/>
+        <h3>En tout cas c'est super bon, tiens regarde :</h3>
         <div class="carousel" id="produits">
-          <div class="prev"></div>
           <ul>
-            <li class="slide-active", id='img-1'><%= image_tag("4.jpg", :height=>'400px', :width=>'700px') %></li>
-            <li class="slide", id='img-2'><%= image_tag("1.jpg", :height=>'400px', :width=>'700px') %></li>
-            <li class="slide", id='img-3'><%= image_tag("3.jpg", :height=>'400px', :width=>'700px') %></li>
+            <li class="slide-active", id='img-1'><%= image_tag("4.jpg", :height=>'400px', :width=>'100%') %></li>
+            <li id='img-2'><%= image_tag("1.jpg", :height=>'400px', :width=>'100%') %></li>
+            <li id='img-3'><%= image_tag("3.jpg", :height=>'400px', :width=>'100%') %></li>
           </ul>
+          <div class="prev"></div>
           <div class="next"></div>
         </div>
-      </div>
       <ol class="dots">
         <li id="dot-1" class="dot-active"></li>
         <li id= "dot-2"></li>
@@ -27,6 +33,8 @@
       </ol>
     </div>
     <div id="tab-3" class="tab-content">
+    <h2>Tu peux nous joindre au 06 06 06 06 06 </h2>
+    <p>On est situés Grand'rue à Strasbourg, tu peux venir prendre ton Kebab à emporter et le déguster comme un gros porc sur le parvis de la cathédrale qui est à 2 pas. </p>
     </div>
   </div>
 </div>
