@@ -1,116 +1,90 @@
 $(document).ready(function() {
 
-  $(".carousel .next").click(function() {
+   timer = window.setInterval(next, 5000);
+
+  $(".next").click(function() {
     next()
   });
 
-  $(".carousel .prev").click(function(){
+  $(".prev").click(function(){
     prev()
   });
 
-  function slideImg(){
-    setTimeout(function(){
-    next()
-
-    slideImg();
-    }, 5000);
-
-    }
-    slideImg();
+  $('#dot-1').click(function() {
+    $('#img-1').addClass('slide-active').show();
+    $('#img-2').removeClass('slide-active').hide();
+    $('#img-3').removeClass('slide-active').hide();
+    $('#dot-2').removeClass('dot-active')
+    $('#dot-3').removeClass('dot-active')
+    $('#dot-1').addClass('dot-active')
+    clearInterval(timer);
+    timer = window.setInterval(next, 5000);
   });
 
-  function next() {
-    var currentSlide = $('.carousel li.active');
-    var nextSlide = $('.carousel li.active').next();
+  $('#dot-2').click(function() {
+    $('#img-2').addClass('slide-active').show();
+    $('#img-1').removeClass('slide-active').hide();
+    $('#img-3').removeClass('slide-active').hide();
+    $('#dot-1').removeClass('dot-active')
+    $('#dot-3').removeClass('dot-active')
+    $('#dot-2').addClass('dot-active')
+    clearInterval(timer);
+    timer = window.setInterval(next, 5000);
+  });
 
-    currentSlide.removeClass('active').hide();
+  $('#dot-3').click(function() {
+    $('#img-3').addClass('slide-active').show();
+    $('#img-1').removeClass('slide-active').hide();
+    $('#img-2').removeClass('slide-active').hide();
+    $('#dot-1').removeClass('dot-active')
+    $('#dot-2').removeClass('dot-active')
+    $('#dot-3').addClass('dot-active')
+    clearInterval(timer);
+    timer = window.setInterval(next, 5000);
+  });
+
+});
+
+
+  function next() {
+    var currentSlide = $('.carousel li.slide-active');
+    var nextSlide = $('.carousel li.slide-active').next();
+    var currentDot = $('.dot-active');
+    var nextDot = currentDot.next();
+
+    currentSlide.fadeOut(600).removeClass('slide-active').hide();
+    currentDot.removeClass('dot-active');
 
     if (nextSlide.length === 0) {
-    nextSlide = $('.carousel li').first();
+      nextSlide = $('.carousel li').first();
+      nextDot = $('.dots li').first();
     }
-    nextSlide.addClass('active').show();
+    nextSlide.fadeIn(600).addClass('slide-active').show();
+    nextDot.addClass('dot-active');
+
+    clearInterval(timer);
+    timer = window.setInterval(next, 5000);
   }
 
   function prev() {
 
-    var currentSlide = $('.carousel li.active');
-    var prevSlide = $('.carousel li.active').prev();
+    var currentSlide = $('.carousel li.slide-active');
+    var prevSlide = $('.carousel li.slide-active').prev();
+    var currentDot= $('.dot-active');
+    var prevDot= currentDot.prev()
 
-    currentSlide.removeClass('active').hide();
+    currentSlide.fadeOut(600).removeClass('slide-active').hide();
+    currentDot.removeClass('dot-active');
 
     if (prevSlide.length === 0) {
-    prevSlide = $('.carousel li').last();
+      prevSlide = $('.carousel li').last();
+      prevDot = $('.dots li').last();
     }
 
-    prevSlide.addClass('active').show();
+    prevSlide.fadeIn(600).addClass('slide-active').show();
+    prevDot.addClass('dot-active');
+
+    clearInterval(timer);
+    timer = window.setInterval(next, 5000);
 
   }
-
-
-
-
-// $(document).ready(function(){
-//
-// var $carrousel = $('.carousel'), // on cible le bloc du carrousel
-//     $img = $('.carousel img'), // on cible les images contenues dans le carrousel
-//     indexImg = $img.length - 1, // on définit l'index du dernier élément
-//     i = 0, // on initialise un compteur
-//     $currentImg = $img.eq(i); // enfin, on cible l'image courante, qui possède l'index i (0 pour l'instant)
-//
-// $img.css('display', 'none'); // on cache les images
-// $currentImg.css('display', 'block'); // on affiche seulement l'image courante
-//
-// $('.next').click(function(){ // image suivante
-//
-//     i++; // on incrémente le compteur
-//
-//     if( i <= indexImg ){
-//         $img.css('display', 'none'); // on cache les images
-//         $currentImg = $img.eq(i); // on définit la nouvelle image
-//         $currentImg.css('display', 'block'); // puis on l'affiche
-//     }
-//     else{
-//         i = indexImg;
-//     }
-//
-// });
-//
-// $('.prev').click(function(){ // image précédente
-//
-//     i--; // on décrémente le compteur, puis on réalise la même chose que pour la fonction "suivante"
-//
-//
-//     if( i >= 0 ){
-//         $img.css('display', 'none');
-//         $currentImg = $img.eq(i);
-//         $currentImg.css('display', 'block');
-//     }
-//     else{
-//         i = 0;
-//     }
-//
-// });
-//
-// function slideImg(){
-//     setTimeout(function(){ // on utilise une fonction anonyme
-//
-//         if(i < indexImg){ // si le compteur est inférieur au dernier index
-// 	    i++; // on l'incrémente
-// 	}
-// 	else{ // sinon, on le remet à 0 (première image)
-// 	    i = 0;
-// 	}
-//
-// 	$img.css('display', 'none');
-//
-// 	$currentImg = $img.eq(i);
-// 	$currentImg.css('display', 'block');
-//
-// 	slideImg(); // on oublie pas de relancer la fonction à la fin
-//
-//     }, 2000); // on définit l'intervalle à 7000 millisecondes (7s)
-// }
-//
-// slideImg(); // enfin, on lance la fonction une première fois
-//
-// });

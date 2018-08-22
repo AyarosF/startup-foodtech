@@ -7,13 +7,26 @@
     </ul>
     <br/>
     <div id="tab-1" class="tab-content current">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </div>
     <div id="tab-2" class="tab-content">
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <div class="slide-container">
+        <div class="carousel" id="produits">
+          <div class="prev"></div>
+          <ul>
+            <li class="slide-active", id='img-1'><%= image_tag("4", height:'400px', width: '700px') %></li>
+            <li class="slide", id='img-2'><%= image_tag("1", id:'img-2', height:'400px', width: '700px') %></li>
+            <li class="slide", id='img-3'><%= image_tag("3", id:'img-3', height:'400px', width: '700px') %></li>
+          </ul>
+          <div class="next"></div>
+        </div>
+      </div>
+      <ol class="dots">
+        <li id="dot-1" class="dot-active"></li>
+        <li id= "dot-2"></li>
+        <li id="dot-3"></li>
+      </ol>
     </div>
     <div id="tab-3" class="tab-content">
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </div>
 </div>
