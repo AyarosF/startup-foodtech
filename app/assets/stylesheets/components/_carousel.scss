@@ -57,7 +57,7 @@
 .carousel {
   text-align:center;
   position: relative;
-    margin-top: 100px; 
+  margin-top: 100px;
   height : 400px;
   ul {
     padding: 0;
@@ -70,7 +70,7 @@
   position: absolute;
   width: 100%;
   }
+  li.slider {
+  display: none;
 }
-
-#img-1, #img-2, #img-3 {
 }
