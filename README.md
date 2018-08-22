@@ -1,24 +1,24 @@
-# README
+# Movie searcher - projet THP 10 août 2018
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## L'application
 
-Things you may want to cover:
+### En local
 
-* Ruby version
+Après avoir cloné le repo, run :
 
-* System dependencies
+- `bundle install`
 
-* Configuration
+### Heroku
 
-* Database creation
+Vous trouverez l'application hébergée sur Heroku au lien suivant : https://startup-food-kebab.herokuapp.com/
 
-* Database initialization
+## Le projet
 
-* How to run the test suite
+Landing page du super restaurant Saladtomatoignon avec :
+- un système de tabulation à 3 onglets
+- un carousel des différents plats
+Les deux sont réalisésuniquement avec les méthodes jquery, sans utilisation d'une autre library
 
-* Services (job queues, cache servers, search engines, etc.)
+## La team
 
-* Deployment instructions
-
-* ...
+Ce programme est made in Strasbourg, by Soraya FRUCTUOSO, Samaneh VAEZI et Hugo PAYET avec amour ! Bonne correction les amis :kissing_heart:
