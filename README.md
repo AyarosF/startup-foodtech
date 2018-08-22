@@ -16,7 +16,7 @@ Vous trouverez l'application hébergée sur Heroku au lien suivant : https://sta
 
 Landing page du super restaurant Saladtomatoignon avec :
 - un système de tabulation à 3 onglets
-- un carousel des différents plats
+- un carousel des différents plats (une flèche de chaque côté pour avancer ou reculer, une image toutes les 5 secondes et des petits cercles cliquables qui indiquent dans quelle slide tu es)
 Les deux sont réalisésuniquement avec les méthodes jquery, sans utilisation d'une autre library
 
 ## La team
