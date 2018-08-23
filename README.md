@@ -21,4 +21,4 @@ Les deux sont réalisésuniquement avec les méthodes jquery, sans utilisation d
 
 ## La team
 
-Ce programme est made in Strasbourg, by Soraya FRUCTUOSO, Samaneh VAEZI et Hugo PAYET avec amour ! Bonne correction les amis :kissing_heart:
+Ce programme est made in Strasbourg, by Soraya FRUCTUOSO, Soraya Fructuoso, Samaneh VAEZI et Hugo PAYET avec amour ! Bonne correction les amis :kissing_heart:
